@@ -1,0 +1,29 @@
+fastapi
+uvicorn[standard]
+sqlalchemy[asyncio]
+greenlet
+alembic
+asyncpg
+psycopg2-binary
+bcrypt
+python-jose[cryptography]
+cryptography
+pydantic[email]
+pydantic-settings
+python-multipart
+httpx
+
+# AI Providers
+anthropic
+openai
+groq
+google-generativeai
+
+# Vector database support
+pgvector
+
+# Async SSE for streaming
+sse-starlette
+
+# Billing
+stripe>=7.0.0

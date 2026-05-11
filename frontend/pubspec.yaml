@@ -1,0 +1,91 @@
+name: jarvis
+description: "Jarvis - Your Personal AI Assistant"
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: any
+
+  # State management - Riverpod
+  flutter_riverpod: any
+  riverpod_annotation: any
+
+  # Navigation
+  go_router: any
+
+  # HTTP client
+  dio: any
+
+  # Secure storage
+  flutter_secure_storage: any
+  shared_preferences: any
+
+  # OAuth authentication
+  flutter_appauth: any
+  url_launcher: any
+  google_sign_in: ^7.0.0
+
+  # Local database - Drift
+  drift: any
+  drift_flutter: any
+  sqlite3_flutter_libs: any
+  path_provider: any
+  path: any
+
+  # Vector database - ObjectBox
+  objectbox: any
+  objectbox_flutter_libs: any
+
+  # On-device ML - TensorFlow Lite
+  tflite_flutter: any
+
+  # UUID generation
+  uuid: any
+
+  # Animations
+  flutter_animate: any
+
+  # Markdown rendering
+  gpt_markdown: any
+
+  # Fonts & UI
+  google_fonts: any
+  lottie: any
+  dotlottie_loader: any
+  intl: any
+  image_picker: any
+  file_picker: any
+
+  # Audio
+  audioplayers: any
+
+  # Background tasks
+  workmanager: ^0.5.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+
+  flutter_lints: any
+
+  # Code generation
+  riverpod_generator: any
+  build_runner: any
+  drift_dev: any
+  objectbox_generator: any
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/models/
+    - assets/sounds/

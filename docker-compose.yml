@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  jarvis-db:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile.postgres
+    container_name: jarvis-db
+    environment:
+      POSTGRES_USER: jarvis
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-jarvis_secret}
+      POSTGRES_DB: jarvis
+    ports:
+      - "5432:5432"
+    volumes:
+      - jarvis_data:/var/lib/postgresql/data
+      - ./docker/init.sql:/docker-entrypoint-initdb.d/01-init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U jarvis -d jarvis"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  jarvis_data:

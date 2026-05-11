@@ -1,0 +1,4 @@
+# Placeholder for ML models
+# The MiniLM L6 V2 TensorFlow Lite model should be placed here
+# Download from: https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
+# File: minilm_l6_v2.tflite (~22MB)
